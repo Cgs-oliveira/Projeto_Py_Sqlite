@@ -34,7 +34,7 @@ def deletar_from(i):
         cur.execute(query,i)
 
 #vizualizar tabela
-def ver_from(i):
+def ver_from():
     ver_dados = []
     with con:
         cur=con.cursor() 
