@@ -1,6 +1,8 @@
 from tkinter import*
 from tkinter import Tk, StringVar, ttk
 
+from PIL import Image, ImageTk
+
 #cores
 
 co0 = "#2e2d2b" #preto
@@ -36,5 +38,14 @@ FrameMeio.grid(row=1,column=0,pady=1,padx=0, sticky=NSEW)
 FrameBaixo = Frame(janela, width=1043, height=300,bg=co1,pady=20, relief=FLAT)
 FrameBaixo.grid(row=2,column=0,pady=0,padx=0, sticky=NSEW)
 
+
+#abrindo imagem
+app_img = Image.open('Invent.png')
+app_img = app_img.resize ((45,45))
+app_img = ImageTk.PhotoImage(app_img)
+
+app_logo = Label(FrameCima, image=app_img, text='Inventário Doméstico', width=900,compound=LEFT, relief=RAISED, anchor=NW, font= ('verdana 20 bold'),bg=co1,fg=co4)
+
+app_logo.place(x=0, y=0)
 
 janela.mainloop()
