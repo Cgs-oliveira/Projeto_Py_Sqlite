@@ -57,7 +57,7 @@ def ver_item(id):
             rows = cur.fetchall()
             for row in rows:
                 ver_item_individual.append(row)
-        
+    return ver_item_individual    
 
 
 
